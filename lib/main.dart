@@ -18,8 +18,35 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // this code is all about the container and its properties
 
+
+            // lets learn about expended widget . this widget is used to occupy all the space on the scree
+
+            Row(
+
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 200,
+                    color: Colors.orange,
+                    child:  const  Center(child: Text("container 1")),
+                  ),
+                ),
+                 // const SizedBox(width: 10,),
+                Expanded(
+                  child: Container(
+                    height: 200,
+                    color: Colors.teal,
+                    child:  const  Center(child: Text("container 2")),
+                  ),
+                ),
+              ],
+            ),
+
+            const  SizedBox(height: 20),
+
+
+            // this code is all about the container and its properties
             Center(
               child: Container(
                 height: 250,
@@ -39,9 +66,11 @@ class MyApp extends StatelessWidget {
                     ]),
                 child: const Center(child: Text("Zohaib Khoso")),
               ),
-            )
+            ),
 
-            // 
+
+
+
           ],
         ),
       ),
